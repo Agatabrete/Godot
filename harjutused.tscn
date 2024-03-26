@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://be3qbmlfy3xy4"]
+[gd_scene load_steps=2 format=3 uid="uid://be3qbmlfy3xy4"]
 
-[ext_resource type="Script" path="res://Godot_test.gd" id="1_wxa4b"]
-[ext_resource type="Script" path="res://Godot_ ülesanne2.gd" id="2_y6m2b"]
+[ext_resource type="Texture2D" uid="uid://bap66ygy7k1pi" path="res://bg1.jpg" id="1_esad0"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_wxa4b")
 
 [node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("2_y6m2b")
+position = Vector2(-2, 0)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_esad0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 158.0
+offset_right = 1048.0
+offset_bottom = 305.0
+pivot_offset = Vector2(-116, -165)
+bbcode_enabled = true
+text = "Teksti lisamine"
+fit_content = true
+scroll_following = true
+autowrap_mode = 0
+tab_size = 24
